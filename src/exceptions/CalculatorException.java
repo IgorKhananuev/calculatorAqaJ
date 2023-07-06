@@ -12,7 +12,7 @@ public enum CalculatorException {
         this.message = message;
     }
 
-    public void throwException() {
+    public IllegalArgumentException throwException() {
         throw new IllegalArgumentException(this.message);
     }
 

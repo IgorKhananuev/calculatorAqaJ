@@ -9,7 +9,7 @@ public class CalculatorApp {
         Calculator calculator = new Calculator();
         try (Scanner scanner = new Scanner(System.in)) {
             String inputValue = Util.readInput(scanner);
-            calculator.calculate(inputValue);
+            calculator.calc(inputValue);
         } catch (IllegalArgumentException e) {
             System.out.printf("Неверный результат: %s", e.getMessage());
         }
