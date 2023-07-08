@@ -1,12 +1,12 @@
 package calculator;
 
 import exceptions.CalculatorException;
-import util.Util;
+import static util.Util.checkInput;
 
 public class Calculator {
 
-    public String calc(String input) {
-        Util.checkInput(input);
+    public static String calc(String input) {
+        checkInput(input);
         String[] splitInput = input.split(" ");
         char operator = splitInput[1].charAt(0);
         int inputValue1 = Integer.parseInt(splitInput[0]);
