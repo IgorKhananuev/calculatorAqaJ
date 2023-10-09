@@ -1,10 +1,20 @@
-package calculator;
-
 import exceptions.CalculatorException;
+
+import java.util.Scanner;
+
 import static util.Util.checkInput;
+import static util.Util.readInput;
 
-public class Calculator {
+public class Main {
 
+    public static void main(String[] args) {
+        try (Scanner scanner = new Scanner(System.in)) {
+            String inputValue = readInput(scanner);
+            System.out.print(calc(inputValue));
+        } catch (IllegalArgumentException e) {
+            System.out.printf("Неверный результат: %s", e.getMessage());
+        }
+    }
     public static String calc(String input) {
         checkInput(input);
         String[] splitInput = input.split(" ");
